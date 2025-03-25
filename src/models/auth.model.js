@@ -13,7 +13,7 @@ const Auth = sequelize.define(
             allowNull: false,
             unique: true,
             validate:{
-                isMail: true,
+                isMail: {msg:"Debe ser un correo valido"},
                 notNull: {msg:"El correo electronico es obligatorio"}
             }
         },
